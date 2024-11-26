@@ -9,4 +9,6 @@ import java.util.List;
 public interface MovieCardRepository extends JpaRepository<MovieCard, Long> {
 	List<MovieCard> findAllByGenre(Genre genre);
 	List<MovieCard> findAllByTitleContainingIgnoreCase(String title);
+	List<MovieCard> findTop10ByOrderByRatingDesc();
+	List<MovieCard> findAllByGenreAndRatingAndProductionYearBetween(Genre genre,Integer rating, Long start, Long end);
 }

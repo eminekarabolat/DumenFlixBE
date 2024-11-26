@@ -18,5 +18,8 @@ public class RestApis {
 	public static final String MOVIELIST = "/movie-list";
 	public static final String MOVIEBYGENRE = "/movie-by-genre";
 	public static final String MOVIEBYTITLE = "/movie-by-title";
+	public static final String TOPRATEDMOVIE = "/top-rated-movies";
+	public static final String FILTERMOVIE = "/filter-movie";
+	
 
 }
