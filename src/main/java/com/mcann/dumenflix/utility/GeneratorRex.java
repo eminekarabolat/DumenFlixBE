@@ -1,3 +1,4 @@
+/*
 package com.mcann.dumenflix.utility;
 
 import com.mcann.dumenflix.repository.MovieCardRepository;
@@ -18,4 +19,4 @@ public class GeneratorRex {
 			movieCardRepository.save(movie);
 		}
 	}
-}
+}*/
