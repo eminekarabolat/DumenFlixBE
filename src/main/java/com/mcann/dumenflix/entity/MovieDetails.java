@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class MovieDetails {
 	@Id
 	Long id;
+	@Column(length = 1023)
 	String description;
 	String videoUrl;
 	String producer;

@@ -16,6 +16,7 @@ public class RestApis {
 	public static final String DOLOGIN = "/dologin";
 	public static final String GETPROFILE = "/get-profile";
 	public static final String MOVIELIST = "/movie-list";
-	public static final String GETALLMYPOSTS = "/get-all-my-posts";
-	public static final String GETALLPOSTS = "/get-all-posts";
+	public static final String MOVIEBYGENRE = "/movie-by-genre";
+	public static final String MOVIEBYTITLE = "/movie-by-title";
+
 }
