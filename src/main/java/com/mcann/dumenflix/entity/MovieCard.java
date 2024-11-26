@@ -19,7 +19,7 @@ public class MovieCard {
 	Long id;
 	String title;
 	Long productionYear;
-	byte rating;
+	Integer rating;
 	@Enumerated(EnumType.STRING)
 	Genre genre;
 	String imageUrl;

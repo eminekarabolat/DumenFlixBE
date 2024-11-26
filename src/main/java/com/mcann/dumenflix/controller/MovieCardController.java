@@ -1,16 +1,16 @@
 package com.mcann.dumenflix.controller;
 
 import static com.mcann.dumenflix.constant.RestApis.*;
+
+import com.mcann.dumenflix.dto.request.MovieFilterRequestDto;
 import com.mcann.dumenflix.dto.response.BaseResponse;
 import com.mcann.dumenflix.entity.MovieCard;
 import com.mcann.dumenflix.service.MovieCardService;
 import com.mcann.dumenflix.utility.enums.Genre;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -54,4 +54,28 @@ public class MovieCardController {
 		                                     .build()
 		);
 	}
+	@GetMapping(TOPRATEDMOVIE)
+	public ResponseEntity<BaseResponse<List<MovieCard>>> getTopRatedMovies(){
+		return ResponseEntity.ok(BaseResponse.<List<MovieCard>>builder()
+		                                     .code(200)
+		                                     .data(movieCardService.getTopRatedMovies())
+		                                     .message("Success")
+		                                     .success(true)
+		                                     .build()
+		);
+	}
+	
+	@PostMapping(FILTERMOVIE)
+	public ResponseEntity<BaseResponse<List<MovieCard>>> getMovieByFilter(@RequestBody MovieFilterRequestDto dto){
+		return ResponseEntity.ok(BaseResponse.<List<MovieCard>>builder()
+		                                     .code(200)
+		                                     .data(movieCardService.getMovieByFilter(dto))
+		                                     .message("Success")
+		                                     .success(true)
+		                                     .build()
+		);
+	}
+	
+	
+	
 }
