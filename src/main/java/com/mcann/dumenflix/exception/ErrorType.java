@@ -13,7 +13,9 @@ public enum ErrorType {
 	INVALID_TOKEN(9001,"Geçersiz token bilgisi",HttpStatus.BAD_REQUEST),
 	NOT_FOUND_USER(6003,"Kullanıcı bulunamadı",HttpStatus.NOT_FOUND),
 	PASSWORD_ERROR(6001,"Girilen şifreler uyuşmamaktadır.",HttpStatus.BAD_REQUEST),
-	INVALID_USERNAME_OR_PASSWORD(6002,"Kullanıcı adı veya şifre hatalıdır.",HttpStatus.BAD_REQUEST);
+	INVALID_USERNAME_OR_PASSWORD(6002,"Kullanıcı adı veya şifre hatalıdır.",HttpStatus.BAD_REQUEST),
+	NOT_FOUND_MOVIE(7001, "film bulunamadı", HttpStatus.BAD_REQUEST);
+	
 	int code;
 	String message;
 	HttpStatus httpStatus;
